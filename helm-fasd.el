@@ -1,5 +1,8 @@
-;;; package --- Summary
+;;; package --- Fast open frequently-used file/dir via fasd.
 ;;; Commentary:
+;; (require 'helm-fasd)
+;; (global-set-key (kbd "C-c e") 'helm-fasd)      ;; Or anyother key.
+;; helm-fasd will feedback your opens to fasd's db by default.
 ;;; Code:
 (require 'helm)
 (defun get-all-files ()
@@ -30,7 +33,6 @@
   (helm :sources some-helm-source))
 
 ;(global-set-key (kbd "C-c C-d") 'helm-fasd)   ;; go-mode will re-bind C-cC-d to godef-description.
-(global-set-key (kbd "C-c e") 'helm-fasd)      ;; using C-ce instead
-
+;; (global-set-key (kbd "C-c e") 'helm-fasd)      ;; using C-ce instead
 (provide 'helm-fasd)
 ;;; helm-fasd.el ends here
